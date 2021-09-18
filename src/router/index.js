@@ -18,7 +18,7 @@ const routes = [
     component: () => import('../views/About.vue')
   },
   {
-    path: '/detail',
+    path: '/detail/:keyword',
     name: 'Detail',
     component: () => import('../views/detail/Detail.vue')
   }
