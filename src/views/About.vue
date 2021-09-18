@@ -37,21 +37,19 @@ export default {
           if (data.status === 0) {
             this.nameArr = data.result.list.slice(0, 10);
           }
-          console.log(789,this.nameArr)
+          console.log(789, this.nameArr);
         });
     },
-    back(){
-      this.$router.push('/')
+    back() {
+      this.$router.push("/");
     },
-    detail(index){
-      console.log(index)
-      this.$router.push('/detail?id='+this.nameArr[index].id)
-      
-    }
+    detail(index) {
+      console.log(index);
+      this.$router.push("/detail?id=" + this.nameArr[index].id);
+    },
   },
   mounted() {
     this.categoryDetail();
-    
   },
 };
 </script>
@@ -64,6 +62,9 @@ export default {
   margin-top: 10px;
   text-align: center;
   line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .icon-fanhui {
   font-size: 30px;

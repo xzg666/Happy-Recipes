@@ -4,14 +4,17 @@
         <div class="searchbox clearfix">
           <div class="fl twocode"><i class="iconfont icon-saoma"></i></div>
           <input v-model="inValue" class="input-name fl" placeholder="红烧排骨"/>
-          <div class="search fl"><i class="iconfont icon-sousuo"></i></div>
+          <div class="search fl" @click="search"><i class="iconfont icon-sousuo"></i></div>
+          <i class="iconfont icon-theheart"></i>
         </div>
+        
         <functions :funcArr="info" v-if="info.length"></functions>
       </div>
   </div>
 </template>
 
 <script>
+
  import functions from '@/components/functions.vue'
   export default {
     data(){
@@ -26,11 +29,13 @@
     methods:{
       loadData(){
         this.$axios.get("/api/class",{params:{appkey:"4005c1e92dfb3876"}}).then((res)=>{
-          console.log(res)
+          // console.log(res)
           this.info = res.data.result
-
-
         })
+      },
+      search(){
+        // console.log(789,this.inValue)
+        this.$router.push({name:'Detail',params:{keyword:this.inValue}})
       }
     },
     components:{

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2369950 */
+  src: url('iconfont_new.woff2?t=1631942306661') format('woff2'),
+       url('iconfont_new.woff?t=1631942306661') format('woff'),
+       url('iconfont_new.ttf?t=1631942306661') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tubiaozhizuomoban:before {
+  content: "\e609";
+}
+
+.icon-theheart:before {
+  content: "\eb53";
+}
+
